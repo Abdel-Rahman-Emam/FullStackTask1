@@ -8,8 +8,8 @@ require('dotenv').config();
 // express app
 const app = express();
 // connect to mongodb & listen for requests
-const rapidapiKey= process.env.API_KEY;
-dbURI='mongodb+srv://Abdelrahman:healer4523@cluster0.jt1cd.mongodb.net/DBExample1?retryWrites=true&w=majority'
+const ;
+dbURI=process.env.dbURI;
 mongoose.connect(dbURI,
  { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(process.env.PORT || 3000)).catch((err) => console.log(err));
@@ -42,7 +42,7 @@ var optionsWeather = {
     params: {q: 'Cairo'},
     headers: {
       'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
-      'x-rapidapi-key': 'c3ef9425d0msha87e646d9b5db32p12bf5bjsn9496d7d13d7a'
+      'x-rapidapi-key': process.env.API_KEY
     }
   };
 app.get('/api', (req, res)=>{
