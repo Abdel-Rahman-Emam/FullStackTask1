@@ -1,0 +1,14 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="home content">
+        <h2>Cairo Information</h2>
+                <h3 class='city'><%= response.data.location.name %></h3>
+                <p class='time'>The Local time is: <%= response.data.location.localtime %></p>
+                <p class='geolocation'>The Geographic Location is: <%= response.data.location.lat %>, <%= response.data.location.lon %> </p>
+                <p class='geolocation'>The Current Temperature in Celsius is: <%= response.data.current.temp_c %>, <%= response.data.location.lon %> </p>
+    </div>   
+    <%- include ('./partials/footer.ejs') %>
+</body>
+</html>
