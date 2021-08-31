@@ -6,11 +6,14 @@ const blogRoutes = require('./routes/blogroutes.js')
 var axios = require("axios").default;
 const aws = require('aws-sdk');
 
+let s3 = new aws.S3({
+  MY_API_KEY: process.env.MY_API_KEY,
+  dbURI: process.env.dbURI
+});
 require('dotenv').config();
 // express app
 const app = express();
 // connect to mongodb & listen for requests
-const ;
 dbURI=process.env.dbURI;
 mongoose.connect(dbURI,
  { useNewUrlParser: true, useUnifiedTopology: true })
