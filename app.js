@@ -42,7 +42,7 @@ var optionsWeather = {
     params: {q: 'Cairo'},
     headers: {
       'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
-      'x-rapidapi-key': rapidapiKey
+      'x-rapidapi-key': 'c3ef9425d0msha87e646d9b5db32p12bf5bjsn9496d7d13d7a'
     }
   };
 app.get('/api', (req, res)=>{
