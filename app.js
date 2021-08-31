@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogroutes.js')
 //axios
 var axios = require("axios").default;
+const aws = require('aws-sdk');
+
 require('dotenv').config();
 // express app
 const app = express();
@@ -42,7 +44,7 @@ var optionsWeather = {
     params: {q: 'Cairo'},
     headers: {
       'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
-      'x-rapidapi-key': process.env.API_KEY
+      'x-rapidapi-key': process.env.MY_API_KEY
     }
   };
 app.get('/api', (req, res)=>{
